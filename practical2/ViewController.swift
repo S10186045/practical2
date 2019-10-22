@@ -66,6 +66,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnClick(_ sender: Any) {
         showAllFriends()
+    
     }
 }
 
