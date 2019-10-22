@@ -24,6 +24,8 @@ class ViewController: UIViewController {
         friendList.append(friend2)
         
         showAllFriends()
+        displayFriendsUnder20()
+        print("The average age is \(findAverageAge())")
     }
     
     func showAllFriends(){
@@ -35,9 +37,22 @@ class ViewController: UIViewController {
     func displayFriendsUnder20(){
         for f in friendList{
             if f.age < 20{
-                print("\(f.firstName) \(f.lastName) \(f.age), you are under age!")
+                print("\(f.firstName) \(f.lastName), you are under age!")
             }
         }
+    }
+    
+    func findAverageAge()->Double{
+        var average: Double = 0
+        var total: Double = 0
+        
+        for f in friendList{
+            total = total + Double(f.age)
+        }
+        
+        average = total / Double(friendList.count)
+       
+        return average
     }
 }
 
