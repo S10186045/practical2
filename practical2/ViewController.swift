@@ -23,6 +23,21 @@ class ViewController: UIViewController {
         friendList.append(friend1)
         friendList.append(friend2)
         
+        showAllFriends()
+    }
+    
+    func showAllFriends(){
+        for f in friendList{
+            print("\(f.firstName) \(f.lastName) \(f.age)")
+        }
+    }
+    
+    func displayFriendsUnder20(){
+        for f in friendList{
+            if f.age < 20{
+                print("\(f.firstName) \(f.lastName) \(f.age), you are under age!")
+            }
+        }
     }
 }
 
