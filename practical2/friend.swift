@@ -17,6 +17,7 @@ class Friend {
         self.firstName = firstname
         self.lastName = lastname
         self.age = age
+       
     }
     
     
